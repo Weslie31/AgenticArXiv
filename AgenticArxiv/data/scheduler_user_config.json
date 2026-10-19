@@ -1,0 +1,10 @@
+{
+  "interval_minutes": 1440,
+  "aspects": [
+    "CV",
+    "AI",
+    "SE"
+  ],
+  "max_results": 5,
+  "enabled": true
+}

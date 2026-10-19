@@ -1,0 +1,7 @@
+{
+  "daily_ml": false,
+  "daily_cv": false,
+  "daily_nlp": false,
+  "daily_ai": false,
+  "daily_user": true
+}

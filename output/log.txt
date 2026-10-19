@@ -1,0 +1,12 @@
+2026-10-10 19:58:40 | INFO | api.app:lifespan:25 | Initializing database tables...
+2026-10-10 19:58:40 | INFO | api.app:lifespan:45 | 无残留锁文件。
+2026-10-10 19:58:40 | INFO | api.app:lifespan:46 | Database ready.
+2026-10-10 19:58:40 | INFO | api.app:lifespan:49 | Starting subscription scheduler...
+2026-10-10 19:58:40 | INFO | api.app:lifespan:55 | Subscription scheduler started.
+2026-10-10 19:58:40 | INFO | scheduler.runner:start:484 | 订阅调度已配置（多账号隔离）
+2026-10-10 19:58:40 | INFO | scheduler.runner:_schedule_loop:467 | [Scheduler] 订阅调度器已启动
+2026-10-10 20:01:01 | INFO | services.user_llm_config:update_user_llm_config:108 | Updated LLM config for user 8: model=gpt-4o-mini, base_url=https://api.openai.com/v1
+2026-10-10 20:01:01 | INFO | services.user_llm_config:update_user_llm_config:108 | Updated LLM config for user 8: model=gpt-4o, base_url=https://api.openai.com/v1
+2026-10-10 20:01:21 | INFO | services.user_llm_config:update_user_llm_config:108 | Updated LLM config for user 8: model=None, base_url=None
+2026-10-10 20:01:21 | INFO | services.user_llm_config:delete_user_llm_config:153 | Reset LLM config for user 8 to system default
+2026-10-10 20:21:39 | INFO | api.app:lifespan:58 | Shutting down...

@@ -1,0 +1,21 @@
+arxiv
+requests
+python-dotenv
+loguru
+pydantic
+fastapi
+uvicorn[standard]
+pdf2zh==1.7.9
+sqlalchemy>=2.0
+pymysql
+fire
+mcp>=1.0
+sqlalchemy
+schedule
+pymupdf
+scikit-learn
+sentence-transformers>=2.2.0
+# pdf2zh 1.7.9 与 NumPy 2 不兼容（np.fromstring 被移除）；
+# Python 3.13 没有 NumPy 1.x 的 wheel，故按版本区分（bootstrap 会额外打补丁）。
+numpy<2; python_version < "3.13"
+numpy>=2; python_version >= "3.13"

@@ -1,0 +1,36 @@
+.idea
+.vscode
+.venv
+node_modules
+__pycache__
+*.pyc
+!.gitkeep
+.run
+# 环境变量文件
+.env
+.env.*
+!.env.example
+*.env.local
+# 日志文件
+logs/*.log
+logs/*.log.*
+*.log
+# 数据文件
+results.txt
+temp.txt
+collected_code.txt
+collected_code_web.txt
+# backup files
+environment_backup.yml
+# PDF files
+*.pdf
+*.pdf.lock
+*.pdf.part
+# runtime caches
+AgenticArxiv/output/tmp/
+# paper docs
+paper-doc/
+paper-aigc/
+.venv_path
+AgenticArxiv/output/*.json
+AgenticArxiv/output/*.txt
