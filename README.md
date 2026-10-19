@@ -21,16 +21,33 @@
 
 ### 1️⃣ MySQL 初始化
 
-在 Linux 机器上执行：
-```bash
+先打开 MySQL 客户端（任选与你系统对应的一种）：
+
+```powershell
+# Windows（MySQL Installer 默认路径）
+& "C:\Program Files\MySQL\MySQL Server 8.0\bin\mysql.exe" -u root -p
+# 或直接使用 MySQL Workbench 的 Query 窗口
+
+# Linux（Debian/Ubuntu 常见免密）
+sudo mysql
+# 或
+mysql -u root -p
+
+# macOS（Homebrew）
+brew services start mysql
 mysql -u root -p
 ```
+
+然后在客户端里执行（SQL 与操作系统无关）：
+
 ```sql
 CREATE DATABASE IF NOT EXISTS agentic_arxiv DEFAULT CHARACTER SET utf8mb4;
 CREATE USER IF NOT EXISTS 'arxiv'@'localhost' IDENTIFIED BY 'arxiv123';
 GRANT ALL PRIVILEGES ON agentic_arxiv.* TO 'arxiv'@'localhost';
 FLUSH PRIVILEGES;
 ```
+
+> 使用阿里云 RDS 等云数据库时，直接在控制台建库/建账号/加白名单即可。
 
 ### 2️⃣ 克隆项目并配置环境
 
@@ -54,7 +71,7 @@ AGENT_TYPE=regex  # 或 mcp、skill_cli
 # 可选：PDF 相关配置
 PDF_RAW_PATH=./output/pdf_raw
 PDF_TRANSLATED_PATH=./output/pdf_translated
-PDF2ZH_SERVICE=bing          # 翻译服务
+PDF2ZH_SERVICE=openai:deepseek-chat   # 翻译服务（bing 引擎已不受支持）
 PDF2ZH_THREADS=4             # 翻译线程数
 EOF
 ```
